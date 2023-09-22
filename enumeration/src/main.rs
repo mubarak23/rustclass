@@ -11,3 +11,13 @@ fn main() {
     // takes a String argument and returns an instance of the IpAddr type.
     println!("Hello, world!");
 }
+
+// fn plus_one(x: Option<i32>) -> Option<i32> {
+//     match x {
+//         None => none,
+//         Some(i) => Some(i + 1)
+//     }
+// }
+// let five = Some(4);
+//  let six = plus_one(five);
+//     let none = plus_one(None);

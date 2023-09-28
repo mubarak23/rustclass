@@ -1,4 +1,4 @@
-
+#[warn(unused_variables)]
 trait Animal {
     fn sound (&self) -> String;
 }
@@ -47,7 +47,40 @@ impl Hello for Teacher {
     }
 }
 
+trait NonLiving {
+    fn noise(&self);
+}
 
+struct Dog;
+struct Pig;
+
+impl NonLiving for Dog {
+    fn noise (&self){
+        println!("Woff")
+    }
+}
+impl NonLiving for Pig {
+    fn noise (&self){
+        println!("Meow")
+    }
+}
+
+// dynamic trait object
+// fn return_animal(s: &str) -> &dyn NonLiving {
+//     match s {
+//         "dog" => &Dog {},
+//         "pig" => &Pig {},
+//         - => painic!(),
+//     }
+// }
+
+fn randon_number(num: u16) -> Box<dyn NonLiving>{
+    if num >10 {
+        Box::new(Pig {})
+    } else {
+        Box::new(Dog {})
+    }
+}
 
 fn main() {
     let s = Student {};
@@ -56,4 +89,10 @@ fn main() {
     let t = Teacher {};
     assert_eq!(t.say_hi(), "Hi, I'm your new teacher");
     assert_eq!(t.say_something(), "I'm not a bad teacher");
+    // let animal1 = return_animal("pig");
+    // let animal2 = return_animal("dog");
+
+    let animal_noise = 6;
+    let the_noise = randon_number(animal_noise);
+    the_noise.noise();
 }

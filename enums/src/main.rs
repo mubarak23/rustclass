@@ -86,3 +86,23 @@ fn main() {
     println!("Result of subtraction: {}", result_subtract);
 
 }
+
+// Summary:
+
+// 1. **Enums**: The code demonstrates the use of enums (`WebEvent` and `VeryVerboseEnumOfThingsToDoWithNumbers`). Enums allow you to define a type by enumerating its possible values.
+
+// 2. **Variants**: Enums can have different variants representing different states or types of data. For instance, `WebEvent` has variants like `PageLoad`, `PageUnload`, `KeyPressed`, `Paste`, and `Click`.
+
+// 3. **Associated Data**: Enums can carry associated data with each variant. For example, `KeyPressed` variant carries a character, `Paste` variant carries a string, and `Click` variant carries coordinates.
+
+// 4. **Pattern Matching**: The `match` keyword is used extensively to pattern match on enum variants. This allows different behaviors or actions to be executed based on the variant of the enum.
+
+// 5. **Type Aliases**: The code also demonstrates the usage of type aliases. Type aliases provide alternative names for existing types. In this code, `Operations` is an alias for the `WebEvent` enum.
+
+// 6. **Function Implementation for Enums**: The `VeryVerboseEnumOfThingsToDoWithNumbers` enum has associated functions (`run`) implemented for each variant. These functions perform operations like addition and subtraction based on the enum variant.
+
+// 7. **Usage in Main**: In the `main` function, various instances of enums are created and passed to functions for inspection. Additionally, arithmetic operations are performed using the `VeryVerboseEnumOfThingsToDoWithNumbers` enum.
+
+// 8. **Result Display**: Finally, the results of arithmetic operations are displayed, showing the outcomes of addition and subtraction performed using the enum variants.
+
+// In summary, this code showcases the versatility of enums in Rust, including the ability to define different variants with associated data, perform pattern matching, utilize type aliases for convenience, and implement functions for enum variants.
